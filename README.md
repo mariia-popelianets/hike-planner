@@ -4,7 +4,7 @@
 
 A web app for planning mountain hikes; here you can note down the gear to bring and the planned route, as well as save favorite locations or past hikes.
 
-## Features
+## Planned Features
 
 - **Gear Manager:** Note down and track all the necessary equipment for your trip.
 - **Route Planner:** Map out and visualize your planned hiking trail.
@@ -16,6 +16,7 @@ A web app for planning mountain hikes; here you can note down the gear to bring 
 - TypeScript
 - Vite
 - ESLint
+- CSS
 
 ## Roadmap
 
