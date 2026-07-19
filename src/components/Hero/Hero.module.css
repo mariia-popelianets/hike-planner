@@ -1,0 +1,57 @@
+.image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 600px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Центрує контент по вертикалі */
+  align-items: flex-start; /* Вирівнює контент по лівому краю */
+
+  /* Відступи та шрифти */
+  padding: 0 clamp(20px, 10vw, 120px); /* Тимчасові відступи зліва і справа */
+  box-sizing: border-box;
+  font-family: sans-serif; /* Замініть на ваш шрифт проекту */
+  color: #ffffff;
+}
+
+.title {
+  font-weight: 500;
+  line-height: 1.1;
+  max-width: 500px;
+  text-align: left; /* Обмежує ширину тексту, щоб він переносився як на фото */
+  margin: 0 0 40px 0;
+  color: yellow;
+}
+
+.subtitle {
+  text-align: left;
+  font-weight: 400;
+  line-height: 1.5;
+  max-width: 500px;
+  color: rgba(255, 255, 255, 0.9); /* Трохи прозорий білий */
+  margin: 0 0 20px 0;
+}
+
+.button {
+  background-color: #d4e157; /* Салатовий колір як на фото */
+  color: darkgreen;
+  border: none;
+  border-radius: 8px; /* Округлені кути */
+  padding: 14px 28px;
+
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  /* Якщо хочете додати іконку всередині кнопки перед текстом */
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  background-color: #c0ca33; /* Ефект при наведенні */
+}
