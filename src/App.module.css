@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+
+body {
+  font-family:
+    "Montserrat",
+    system-ui,
+    -apple-system,
+    sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7f6;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a252f;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #7f8c8d;
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  line-height: 1.5;
+}

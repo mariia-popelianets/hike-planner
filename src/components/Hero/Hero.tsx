@@ -1,5 +1,5 @@
 import css from "./Hero.module.css";
-import bgImage from "../../assets/hero-img.png";
+import bgImage from "../../assets/hero-img-1.jpg";
 export interface HeroProps {
   title: string;
   subtitle: string;
