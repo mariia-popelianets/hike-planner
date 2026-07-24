@@ -16,13 +16,15 @@ export const listGear: GearItem[] = [
   },
 ];
 
-export const mockData: Trip = {
-  id: "vvv",
-  title: "Hoverla",
-  date: "08.08.2026",
-  location: "Vorohta",
-  description: "It is the most beautiful mountain in Ukraine",
-  difficulty: "hard",
-  status: "planned",
-  gearItems: listGear,
-};
+export const mockData: Trip[] = [
+  {
+    id: "vvv",
+    title: "Hoverla",
+    date: "08.08.2026",
+    location: "Vorohta",
+    description: "It is the most beautiful mountain in Ukraine",
+    difficulty: "hard",
+    status: "planned",
+    gearItems: listGear,
+  },
+];

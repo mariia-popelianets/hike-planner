@@ -3,7 +3,7 @@ export type TripStatus = "planned" | "in_process" | "completed";
 export type Difficulty = "easy" | "medium" | "hard";
 
 export interface Trip {
-  id?: string;
+  id: string;
   title: string;
   date: string;
   location: string;
