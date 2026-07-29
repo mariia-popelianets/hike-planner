@@ -15,7 +15,8 @@ export default function TripForm({
 }: TripFormProps) {
   const [formData, setFormData] = useState<CreateTrip>({
     title: "",
-    date: "",
+    startDate: "",
+    finishDate: "",
     location: "",
     description: "",
     difficulty: "easy",
@@ -53,20 +54,37 @@ export default function TripForm({
           required
         />
       </div>
-      <div className={css.field}>
-        <label htmlFor="trip-date" className={css.label}>
-          Date
-        </label>
-        <input
-          className={css.input}
-          id="trip-date"
-          name="date"
-          type="date"
-          placeholder="Trip date"
-          value={formData.date}
-          onChange={handleChange}
-          required
-        />
+      <div className={css.dateGroup}>
+        <div className={css.dateField}>
+          <label htmlFor="trip-start-date" className={css.subLabel}>
+            Start Date
+          </label>
+          <input
+            className={css.input}
+            id="trip-start-date"
+            name="startDate"
+            type="date"
+            value={formData.startDate}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div className={css.dateField}>
+          <label htmlFor="trip-finish-date" className={css.subLabel}>
+            End Date
+          </label>
+          <input
+            className={css.input}
+            id="trip-finish-date"
+            name="finishDate"
+            type="date"
+            value={formData.finishDate}
+            onChange={handleChange}
+            min={formData.startDate}
+            required
+          />
+        </div>
       </div>
       <div className={css.field}>
         <label htmlFor="trip-location" className={css.label}>

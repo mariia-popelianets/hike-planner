@@ -5,7 +5,8 @@ export type Difficulty = "easy" | "medium" | "hard";
 export interface Trip {
   id: string;
   title: string;
-  date: string;
+  startDate: string;
+  finishDate: string;
   location: string;
   description?: string;
   gearItems: GearItem[];
@@ -15,7 +16,8 @@ export interface Trip {
 
 export interface CreateTrip {
   title: string;
-  date: string;
+  startDate: string;
+  finishDate: string;
   location: string;
   description?: string;
   difficulty: Difficulty;
