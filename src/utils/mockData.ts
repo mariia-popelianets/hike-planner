@@ -21,7 +21,7 @@ export const mockData: Trip[] = [
     id: "vvv",
     title: "Hoverla",
     startDate: "",
-    finishDate: "",
+    endDate: "",
     location: "Vorohta",
     description: "It is the most beautiful mountain in Ukraine",
     difficulty: "hard",

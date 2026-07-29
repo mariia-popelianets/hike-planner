@@ -1,4 +1,5 @@
 import type { Trip } from "../../types/trip";
+import { formatDateRange } from "../../utils/formatDate";
 import styles from "./TripCard.module.css";
 
 interface TripCardProps {
@@ -7,21 +8,6 @@ interface TripCardProps {
 }
 
 export default function TripCard({ trip, onDelete }: TripCardProps) {
-  const formatDates = (start: string, finish: string) => {
-    if (!start) return "";
-
-    const format = (d: string) => d.split("-").reverse().join(".");
-
-    const startDateFormatted = format(start);
-    const finishDateFormatted = finish ? format(finish) : startDateFormatted;
-
-    if (!finish || startDateFormatted === finishDateFormatted) {
-      return startDateFormatted;
-    }
-
-    return `${startDateFormatted} – ${finishDateFormatted}`;
-  };
-
   return (
     <li className={styles.card}>
       <button
@@ -42,7 +28,7 @@ export default function TripCard({ trip, onDelete }: TripCardProps) {
       <div className={styles.meta}>
         <span className={styles.location}>📍 {trip.location}</span>
         <span className={styles.date}>
-          📅 {formatDates(trip.startDate, trip.finishDate)}
+          📅 {formatDateRange(trip.startDate, trip.endDate)}
         </span>
       </div>
 

@@ -6,18 +6,19 @@ export interface Trip {
   id: string;
   title: string;
   startDate: string;
-  finishDate: string;
+  endDate: string;
   location: string;
   description?: string;
-  gearItems: GearItem[];
+  gearItems?: GearItem[];
   difficulty: Difficulty;
-  status: TripStatus;
+  status?: TripStatus;
+  createdAt?: string;
 }
 
 export interface CreateTrip {
   title: string;
   startDate: string;
-  finishDate: string;
+  endDate: string;
   location: string;
   description?: string;
   difficulty: Difficulty;

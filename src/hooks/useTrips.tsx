@@ -1,38 +1,31 @@
 import { useState, useEffect } from "react";
-import type { Trip } from "../types/trip";
-import { mockData } from "../utils/mockData";
-
-const STORAGE_KEY = "trips";
+import type { Trip, CreateTrip } from "../types/trip";
+import { loadTrips, saveTrips } from "../services/tripStorage";
 
 export const useTrips = () => {
-  const [trips, setTrips] = useState<Trip[]>(() => {
-    const savedTrips = localStorage.getItem(STORAGE_KEY);
-    if (savedTrips) {
-      try {
-        return JSON.parse(savedTrips);
-      } catch (error) {
-        console.error("Помилка зчитування з localStorage:", error);
-        return mockData;
-      }
-    }
-    return mockData;
-  });
+  const [trips, setTrips] = useState<Trip[]>(() => loadTrips());
 
   useEffect(() => {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(trips));
+    saveTrips(trips);
   }, [trips]);
 
-  const addTrip = (newTrip: Trip) => {
-    setTrips((prev) => [...prev, newTrip]);
+  const createTrip = (formData: CreateTrip) => {
+    const newTrip: Trip = {
+      ...formData,
+      id: crypto.randomUUID() as string,
+      createdAt: new Date().toISOString(),
+    };
+
+    setTrips((prev) => [newTrip, ...prev]);
   };
 
   const deleteTrip = (id: string) => {
-    setTrips((prevTrips) => prevTrips.filter((trip) => trip.id !== id));
+    setTrips((prev) => prev.filter((trip) => trip.id !== id));
   };
 
   return {
     trips,
-    addTrip,
+    createTrip,
     deleteTrip,
   };
 };

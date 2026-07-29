@@ -2,23 +2,17 @@ import "./App.module.css";
 import { useState } from "react";
 import Hero from "./components/Hero/Hero";
 import TripForm from "./components/TripForm/TripForm";
-import type { CreateTrip, Trip } from "./types/trip";
+import type { CreateTrip } from "./types/trip";
 import Modal from "./components/Modal/Modal";
 import { useTrips } from "./hooks/useTrips";
 import TripList from "./components/TripList/TripList";
 
 function App() {
   const [isFormOpen, setIsFormOpen] = useState(false);
-  const { trips, addTrip, deleteTrip } = useTrips();
+  const { trips, createTrip, deleteTrip } = useTrips();
 
-  const handleCreateTrip = (trip: CreateTrip) => {
-    const newTrip: Trip = {
-      ...trip,
-      id: crypto.randomUUID(),
-      gearItems: [],
-      status: "planned",
-    };
-    addTrip(newTrip);
+  const handleCreateTrip = (formData: CreateTrip) => {
+    createTrip(formData);
     setIsFormOpen(false);
   };
 
