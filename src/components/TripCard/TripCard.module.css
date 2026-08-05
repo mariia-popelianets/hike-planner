@@ -85,3 +85,19 @@
 
   border-radius: 8px;
 }
+.viewBtn {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #bef264;
+  color: #1a2e05;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.viewBtn:hover {
+  background-color: #a3e635;
+}

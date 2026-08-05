@@ -26,6 +26,7 @@ export const mockData: Trip[] = [
     description: "It is the most beautiful mountain in Ukraine",
     difficulty: "hard",
     status: "planned",
+    createdAt: "2026-08-01T10:00:00.000Z",
     gearItems: listGear,
   },
 ];

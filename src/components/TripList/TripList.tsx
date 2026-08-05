@@ -7,6 +7,7 @@ interface TripListProps {
   trips: Trip[];
   message?: string;
   onDeleteTrip: (id: string) => void;
+  onViewDetails: (trip: Trip) => void;
 }
 
 export default function TripList({
@@ -15,6 +16,7 @@ export default function TripList({
   subtitle,
   message = "You don't have any scheduled hikes yet.",
   onDeleteTrip,
+  onViewDetails,
 }: TripListProps) {
   return (
     <div className={styles.container}>
@@ -25,7 +27,12 @@ export default function TripList({
       ) : (
         <ul className={styles.list}>
           {trips.map((trip) => (
-            <TripCard key={trip.id} trip={trip} onDelete={onDeleteTrip} />
+            <TripCard
+              key={trip.id}
+              trip={trip}
+              onDelete={onDeleteTrip}
+              onViewDetails={onViewDetails}
+            />
           ))}
         </ul>
       )}

@@ -13,6 +13,8 @@ export const useTrips = () => {
     const newTrip: Trip = {
       ...formData,
       id: crypto.randomUUID() as string,
+      status: "planned",
+      gearItems: [],
       createdAt: new Date().toISOString(),
     };
 

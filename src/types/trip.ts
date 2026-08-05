@@ -9,10 +9,10 @@ export interface Trip {
   endDate: string;
   location: string;
   description?: string;
-  gearItems?: GearItem[];
+  gearItems: GearItem[];
   difficulty: Difficulty;
-  status?: TripStatus;
-  createdAt?: string;
+  status: TripStatus;
+  createdAt: string;
 }
 
 export interface CreateTrip {

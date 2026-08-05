@@ -1,0 +1,86 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 8px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.badge {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+/* Складність (якщо стилі вже є глобально/в картці, можна адаптувати) */
+.easy {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.medium {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.hard {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.statusBadge {
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  background-color: #e0f2fe;
+  color: #075985;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 1rem;
+  color: #4b5563;
+}
+
+.location,
+.date {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.descriptionSection {
+  margin-top: 8px;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 12px;
+}
+
+.descriptionSection h4 {
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+  color: #374151;
+}
+
+.description {
+  margin: 0;
+  color: #6b7280;
+  line-height: 1.5;
+  white-space: pre-line;
+}
